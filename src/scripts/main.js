@@ -2,18 +2,16 @@ const diasEmMs =1000 * 60 * 60 * 24,
     horasEmMs = 1000 * 60 * 60,
     minutosEmMs = 1000 * 60;
 
-let armazenaData;
 
 function CriaEvento(dataDoEvento){
     const evento = new Date(dataDoEvento);
-    const EventEmMs = evento.getTime();
+    const eventEmMs = evento.getTime();
     
     this.iniciaEvento = function() { 
         const contador = setInterval(function(){
             const dataAtual = new Date();
             const dataAtualEmMs = dataAtual.getTime();
-            const distanciaAteOEvento = EventEmMs - dataAtualEmMs;
-            armazenaData = distanciaAteOEvento
+            const distanciaAteOEvento = eventEmMs - dataAtualEmMs;
             
             const diasAteOEvento = Math.floor(distanciaAteOEvento / diasEmMs);
             const horasAteOEvento = Math.floor((distanciaAteOEvento % diasEmMs) / horasEmMs);
