@@ -1,3 +1,51 @@
+@use 'hero';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background-color: red;
+    background-color: #232B33;
+    font-family: 'Poppins';
+    color: #eeee;
+}
+
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media(max-width: 640px){
+        max-width: 80%;
+    }
+
+    @media(max-width: 1023px){
+        max-width: 90%;
+    }
+}
+
+header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5%;
+    h1{
+        font-size: 17px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        line-height: 22px;
+
+        @media(max-width: 640px){
+            font-size: .8rem;
+            line-height: 1rem;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1400px){
+            margin-left: 25px;
+        }
+    }
 }

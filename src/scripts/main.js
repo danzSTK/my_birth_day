@@ -20,7 +20,7 @@ function CriaEvento(dataDoEvento){
             const minutosAteOEvento = Math.floor((distanciaAteOEvento % horasEmMs) / minutosEmMs);
             const segundosAteOEvento = Math.floor((distanciaAteOEvento % minutosEmMs)/ 1000);
             
-            document.getElementById('contador').innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`
+            document.getElementById('contador').innerHTML = `<strong>${diasAteOEvento}<br><b>dias</b></strong> : <strong>${horasAteOEvento}<br><b>horas</b></strong> : <strong>${minutosAteOEvento}<br><b>min</b></strong> : <strong>${segundosAteOEvento}<br><b>seg</b></strong>`
             
             if(distanciaAteOEvento < 0){
                 clearInterval(contador)
